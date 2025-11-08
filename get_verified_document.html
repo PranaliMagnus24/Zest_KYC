@@ -1,0 +1,448 @@
+<html class="hydrated">
+<head>
+    <style data-styles="">
+        ion-icon {
+            visibility: hidden
+        }
+        
+        .hydrated {
+            visibility: inherit
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zest</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <link href="assets/zestlogo.png" rel="icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <div class="col-12 bg-white pull-left shadowed" style="width: 100%;  ">
+        <div class="col-12 d-flex justify-content-between align-items-center pull-left p-0">
+            <div class="col-2 pull-left text-left"><img src="assets/logo.png" style="height: 67px;"></div>
+            <div class="col-8 pull-right p-0" id="menu">
+                <div class="w-100 pull-left text-center p-0 d-flex justify-content-end align-items-center">                                
+                                                
+                    <div onclick="logout()" class="pull-left text-center text-black" style="cursor: pointer;">
+                        <i style="color: #283477;"><svg width="25px" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M378 108a191.41 191.41 0 0170 148c0 106-86 192-192 192S64 362 64 256a192 192 0 0169-148M256 64v192" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg></i>
+                        <div>
+                            Logout
+                        </div>
+                    </div>                                                 
+                </div>
+            </div>                
+        </div>
+    </div>
+    <div class="col-lg-12 pull-left col-md-12">
+        <div class="section mt-2" style="width: 100%;">
+            <div class="col-12" style="width: 100%;  ">
+                <div class="card-body pt-0 p-0">
+                    <ul class="nav nav-tabs capsule" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#corporate" role="tab">
+                                Corporate
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#agent" role="tab">
+                                Agent
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tokenlinks" role="tab">
+                                Token Links
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content mt-2">
+                        <div class="tab-pane fade show active" id="corporate" role="tabpanel">
+                            <div class="col-12 pull-left p-0 d-flex align-items-center">
+                                <div class=" col-3 pull-left p-0">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control find bg-white box-shadow-1 no-border" autocomplete="off" onkeyup="clear_btn_hide(),onenter('apply_search')" style="background-color: white; height: 37px; font-size: 10px;padding-left: 37px; " placeholder="Search">
+                                            <ion-icon name="search-outline" style="right: 0px;position: absolute;top: 6px;font-size: 25px;padding-right: 5px;" onclick="apply_search()" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
+                                            <div id="clear_in" class="hidden clear_in" style="font-size: 29px;position: absolute;top: 4px;color: #283477;" onclick="clear_input()">
+                                                <ion-icon name="close-circle-outline" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-2 pull-left">
+                                    <div class="w-100 text-center pull-left box-shadow-1" style="float: right;background: #fff;display: block;border-radius: 10px;border: 0;padding: 9px 0;">
+                                        <div class="form-check col-6 p-0 pull-left">
+                                            <input class="form-check-input verified" type="checkbox" name="flexRadioDefault" onclick="apply_search()" id="corporate_verified" value="yes">
+                                            <label class="form-check-label" for="corporate_verified">
+                                                Verified
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-left">
+                                    <button  type="button" data-bs-toggle="modal" data-bs-target="#createToken" onclick="$('#createToken input[name=type]').val('corporate')" class="btn btn-primary btn-sm me-1">Create Corporate Link</button>
+                                </div>
+                                 <!------Export Corporate------>
+                                 <div class="pull-left">
+                                    <button  type="button" class="btn btn-primary btn-sm me-1" onclick="exportCorporateExcel()">Export</button>
+                                 </div>
+                            </div>
+                            <div class="table-responsive w-100 mt-2 pull-left bg-white">
+                                <div class="col-12 p-0 pull-left font-blue remove border-top b-l-r" style="background: #bdc5f1;position: sticky;top: 0;position: -webkit-sticky;font-weight: bold !important;z-index: 1;border-radius: 10px 10px 0px 0;">
+                                    <div class="pull-left Flex-item font-blue" style="width: 4%;padding-left: 8px;">Sr. No.</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 7%;">Date</div>
+                                    <div class="col-1 pull-left Flex-item font-blue position-relative" style="width: 14%;">Corporate Name</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">GST No.</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 14%;">Address</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Owner Name</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Owner Desigation</div>
+                                    <div class="col-2 pull-left Flex-item font-blue" style="width: 10%;">Owner Number</div>
+                                    <div class="col-1 pull-left Flex-item font-blue text-center" style="width: 12%;">Verify & Add Credit</div>                     
+                                </div>
+                                <div class="corporate_list details w-100 float-start">
+                                                        
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="agent" role="tabpanel">
+                            <div class="col-12 pull-left p-0 d-flex align-items-center">
+                                <div class=" col-3 pull-left p-0">
+                                    <div class="form-group basic">
+                                        <div class="input-wrapper">
+                                            <input type="text" class="form-control bg-white find box-shadow-1 no-border" autocomplete="off" onkeyup="clear_btn_hide(),onenter('apply_search')" style="background-color: white; height: 37px; font-size: 10px;padding-left: 37px; " placeholder="Search">
+                                            <ion-icon name="search-outline" style="right: 0px;position: absolute;top: 6px;font-size: 25px;padding-right: 5px;" onclick="apply_search()" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
+                                            <div id="clear_in" class="hidden clear_in" style="font-size: 29px;position: absolute;top: 4px;color: #283477;" onclick="clear_input()">
+                                                <ion-icon name="close-circle-outline" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" col-2 pull-left">
+                                    <div class="w-100 text-center pull-left box-shadow-1" style="float: right;background: #fff;display: block;border-radius: 10px;border: 0;padding: 9px 0;">
+                                        <div class="form-check col-6 p-0 pull-left">
+                                            <input class="form-check-input verified" type="checkbox" name="flexRadioDefault" onclick="apply_search()" id="agent_verified" value="yes">
+                                            <label class="form-check-label" for="agent_verified">
+                                                Verified
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pull-left">
+                                    <button  type="button" data-bs-toggle="modal" data-bs-target="#createToken" onclick="$('#createToken input[name=type]').val('agent')" class="btn btn-primary btn-sm me-1">Create Agent Link</button>
+                                </div>
+                                <!---------Export Agent------>
+                                <div class="pull-left">
+                                     <button  type="button" class="btn btn-primary btn-sm me-1" onclick="exportAgentExcel()">Export</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive w-100 mt-2 pull-left bg-white">
+                                <div class="col-12 p-0 pull-left font-blue remove border-top b-l-r" style="background: #bdc5f1;position: sticky;top: 0;position: -webkit-sticky;font-weight: bold !important;z-index: 1;border-radius: 10px 10px 0px 0;">
+                                    <div class="pull-left Flex-item font-blue" style="width: 4%;padding-left: 8px;">Sr. No.</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 7%;">Date</div>
+                                    <div class="col-1 pull-left Flex-item font-blue position-relative" style="width: 14%;">Name of the Company</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Address</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 14%;">Partnership</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Office Tel. No</div>
+                                    <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Mobile Nos</div>
+                                    <div class="col-2 pull-left Flex-item font-blue" style="width: 10%;">Email Address</div>                  
+                                </div>
+                                <div class="agent_list details w-100 float-start">
+                                                        
+                                </div>
+                            </div>            
+                        </div>
+                        <div class="tab-pane fade" id="tokenlinks" role="tabpanel">
+                            <div class="table-responsive w-100 mt-2 pull-left bg-white">
+                                <div class="col-12 p-0 pull-left font-blue remove border-top b-l-r" style="background: #bdc5f1;position: sticky;top: 0;position: -webkit-sticky;font-weight: bold !important;z-index: 1;border-radius: 10px 10px 0px 0;">
+<div class="col-1 pull-left Flex-item font-blue" style="width: 4%;">No.</div>
+<div class="col-1 pull-left Flex-item font-blue" style="width: 15%;">Date</div>
+<div class="col-1 pull-left Flex-item font-blue" style="width: 25%;">Token</div>
+<div class="col-1 pull-left Flex-item font-blue" style="width: 25%;">Remark</div>
+<div class="col-1 pull-left Flex-item font-blue" style="width: 10%;">Type</div>                                    
+<div class="col-1 pull-left Flex-item font-blue" style="width: 10%;">Copy Link</div>                                    
+<div class="col-1 pull-left Flex-item font-blue" style="width: 9%;">Status</div>
+                                </div>
+                                <div class="link_list details w-100 float-start">
+                                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+ <div class="modal fade" id="addCredit" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5">Verify below details</h5>
+                </div>
+                <div class="modal-body text-start">
+                    <input type="hidden" name="id" class="id">
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="text1">Enter Name</label>
+                            <input type="text" class="form-control input_style" name="verified_by" style="font-size: 15px !important;">
+                            <i class="clear-input">
+                                <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label" for="name">Designation</label>
+                                <input type="text" class="form-control input_style" name="verified_designation" style="font-size: 15px !important;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Credit Limit</label>
+                            <input type="text" class="form-control input_style" name="credit_limit"  data-pattern="^(\d)+$" data-validation-message="Only Numbers" style="font-size: 15px !important;">
+                        </div>
+                    </div>
+
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Credit Period</label>
+                            <input type="text" class="form-control input_style " name="credit_period" style="font-size: 15px !important;">
+                            <!-- <span style="position: absolute;top: 18px;right: 0;background: #283477;height: 40px;border-radius: 0px 16px 16px 0px;line-height: 40px;padding: 0 10px;color: #fff;">Days</span> -->
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Validity</label>
+                            <input type="text" class="form-control input_style datepickernomax" name="verification_validity" style="font-size: 15px !important;">
+                        </div>
+                    </div>
+
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Note</label>
+                            <textarea type="text" class="form-control input_style" name="verification_note" style="font-size: 15px !important;"></textarea>
+                            <!-- <span style="position: absolute;top: 18px;right: 0;background: #283477;height: 40px;border-radius: 0px 16px 16px 0px;line-height: 40px;padding: 0 10px;color: #fff;">Days</span> -->
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label mb-1">Upload Document</label>
+                            <div class="custom-file-upload" style="height: 40px;">
+                                <input type="file" id="add_verification_document" onchange="readFile(this,'#addCredit input[name=verification_document]')" accept="image/*,application/pdf">
+                                <label for="add_verification_document">
+                                    <span>
+                                        <strong>                                                    
+                                            <i>Choose file</i>
+                                        </strong>
+                                    </span>
+                                </label>
+                                <input type="hidden" name="verification_document">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="button" class="btn col-6 pull-left btn-text-primary" onclick="validate('#addCredit','add_credit')">Submit</button>
+                        <button type="button" class="btn col-6 pull-left btn-text-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="createToken" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title fs-5 text-center">Create Token</h5>
+                    <input type="hidden" name="type" class="type"> 
+                    <input type="hidden" name="id">                    
+                </div>
+                <div class="modal-body">
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="text1">Remark</label>
+                            <input type="text" class="form-control input_style" name="remark" style="font-size: 15px !important;">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="button" class="btn col-6 pull-left btn-text-primary" onclick="validate('#createToken','create_token')">Submit</button>
+                        <button type="button" class="btn col-6 pull-left btn-text-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="copyCode" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title fs-5 text-center">Token</h5>
+                </div>
+                <div class="modal-body text-center text-black">
+                    <span class=" w-100 pull-left">Token is created</span>
+                    <span class="link w-100 pull-left" style="word-break: break-all;"> </span>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="button" class="btn col-12 pull-left btn-text-primary" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/base.js"></script>
+<script>
+var user_id = localStorage.getItem("user_id");
+if (typeof user_id == 'undefined' || user_id == null) {
+    window.location.href = 'login.html'
+}
+get_kyc()
+function get_kyc()
+{
+    $.ajax({
+        type: "GET",
+        url: baseurl + 'KYC/get_KYC',
+        async: true,
+        success: function (html) 
+        {
+            $('.corporate_list').html(html)
+        }
+    });     
+}
+get_agent_KYC()
+function get_agent_KYC()
+{
+    $.ajax({
+        type: "GET",
+        url: baseurl + 'KYC/get_agent_KYC',
+        async: true,
+        success: function (html) 
+        {
+            $('.agent_list').html(html)
+        }
+    });     
+}
+
+
+get_token_list()
+function get_token_list()
+{
+    $.ajax({
+        type: "GET",
+        url: baseurl + 'KYC/get_token_list',
+        async: true,
+        success: function (html) 
+        {
+            $('.link_list').html(html)
+        }
+    });     
+}
+
+function get_remark(id, remark, type) {
+    $('#createToken input[name=id]').val(id)
+    $('#createToken input[name=remark]').val(remark)
+    $('#createToken input[name=type]').val(type)
+}
+function create_token()
+{
+    $.ajax({
+        type: "post",
+        url: baseurl + 'KYC/create_token',
+        async: true,
+        data: "type="+$('#createToken input[name="type"]').val()+"&remark="+$('#createToken input[name="remark"]').val()+"&id="+$('#createToken input[name="id"]').val(),
+        success: function (html)
+        {
+            html=JSON.parse(html)
+            if(html['success']=='true')
+            {
+                $('#createToken').modal('hide')
+                if(html['token'] !== undefined) {
+                    $('#copyCode').modal('show')
+                    type=''
+                    if($('#createToken input[name="type"]').val()=='agent')
+                    {
+                      type=$('#createToken input[name="type"]').val()+'.html';
+                    }
+                    $('#copyCode .link').html(baselink+type+'?token='+html['token']+' <svg onclick="copy_clipboard(\''+baselink+type+'?token='+html['token']+'\')" width="20px" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="128" y="128" width="336" height="336" rx="57" ry="57" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M383.5 128l.5-24a56.16 56.16 0 00-56-56H112a64.19 64.19 0 00-64 64v216a56.16 56.16 0 0056 56h24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>')
+                }
+                get_token_list()
+                $('#createToken input').val('')
+            }
+        }
+    });
+}
+
+function apply_search()
+{
+    if($('.tab-content .tab-pane.active').attr('id')=='corporate')
+    {
+        div='.corporate_list'
+        main_div='#corporate'
+        url=baseurl + 'KYC/get_filter_KYC'
+    }
+    else
+    {
+        div='.agent_list'
+        main_div='#agent'
+        url=baseurl + 'KYC/get_filter_agent_KYC'
+    }
+    $(div).html('')
+    value=$(main_div+' .find').val()
+    verified=''
+    if($(main_div+' .verified:checked').length>0)
+    {
+        verified=$(main_div+' .verified:checked').val()
+    }
+    $.ajax({
+        type: "GET",
+        url: url,
+        async: true,
+        data:"value="+value+"&verified="+verified,
+        success: function (html) 
+        {
+            $(div).html(html)
+        }
+    });     
+}
+function copy_clipboard(text)
+{
+  navigator.clipboard.writeText(text).then(function() {
+    show_toast('<span class="d-flex justify-content-between">Copied <svg  xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="20px"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M464 128L240 384l-96-96M144 384l-96-96M368 128L232 284"/></svg></span>', "success", '', "top", "success");                    
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+  });    
+}
+//Corporate excel
+function exportCorporateExcel() {
+    let verified = document.getElementById('corporate_verified').checked ? 'yes' : '';
+    window.location.href = `api/index.php/export_corporate_excel?verified=${verified}`;
+}
+///Agent excel
+function exportAgentExcel() {
+    let verified = document.getElementById('agent_verified').checked ? 'yes' : '';
+    window.location.href = `api/index.php/export_agent_excel?verified=${verified}`;
+}
+</script>
+                    
+</body>
+
+</html>

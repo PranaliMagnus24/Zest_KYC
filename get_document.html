@@ -1,0 +1,776 @@
+<html class="hydrated">
+<head>
+    <style data-styles="">
+        ion-icon {
+            visibility: hidden
+        }
+        
+        .hydrated {
+            visibility: inherit
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zest</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <link href="assets/zestlogo.png" rel="icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <div id="loader" class="hidden">
+        Please do not reload page untill data gets added
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="section mt-1 pull-left" style="width: 100%;">
+            <div class="col-12 pull-left p-0" style="width: 100%;display: flex;align-items: center;justify-content: center;text-align: center;">
+                <div class="col-2 pull-left text-center"><img src="assets/logo.png" style="height: 100px;"></div>                                    
+            </div>
+            <div class="col-12 mt-2 pull-left get_details" style="width: 100%;">
+                <div class="col-12 pull-left">
+                    <div class=" col-12 pull-left pt-1 pb-1 mb-1 border-blue font12 br8" style=" background: white; "> 
+                        <div class="text-center fs-4 text-black fw-bold mb-1">Corporate Details
+                            <div class="pull-right pe-1 edit_customer fs-6" data-bs-target="#add_customer_modal" data-bs-toggle="modal">
+                                <button type="button" class="btn btn-primary btn-block btn-sm"><ion-icon name="create-outline" role="img" class="md hydrated" aria-label="create outline"></ion-icon> Edit</button>                                
+                            </div>
+                            <div class="pull-right pe-1 fs-6">
+                                <button type="button" class="btn btn-primary btn-block btn-sm"><ion-icon name="create-outline" role="img" class="md hydrated" aria-label="create outline"></ion-icon> Edit</button>                                
+                            </div>
+                        </div>
+                        <div class="pull-left br8 w-100 font-blue border-blue overflow-hidden ">
+                            <div class="col-12 pull-left text-left blue-back bold p-0 d-flex">
+                                <div class="col-1 pull-left border-right" style="min-height: 21px;">
+                                    Date
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Corporate Name
+                                </div>
+                                <div class="col-1 pull-left border-right">
+                                    Type
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Address
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Email
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    Contact
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    GST No.
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    Nature of Business
+                                </div>
+                                <div class="col-1 pull-left text-left">
+                                    Yr / Month of Establishment
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex text-left pull-left pull-left text-center border-top p-0">
+                                <div class="col-1 pull-left border-right" style="min-height: 21px;">
+                                    Date
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Corporate Name
+                                </div>
+                                <div class="col-1 pull-left border-right">
+                                    Type
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Address
+                                </div>
+                                <div class="col-2 pull-left border-right">
+                                    Email
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    Contact
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    GST No.
+                                </div>
+                                <div class="col-1 pull-left text-left border-right">
+                                    Nature of Business
+                                </div>
+                                <div class="col-1 pull-left text-left">
+                                    Yr / Month of Establishment
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mt-2 pull-left">
+                    <div class="col-12 p-0 pull-left border-blue blue-back br8">
+                        <div class="col-12 pull-left text-center pt-2 fw-bold pb-2 fs-5 font-blue ">
+                            Particulars of owner                            
+                        </div>
+                        <div class="col-12 pull-left">
+                            <div class=" col-12 pull-left pt-1 mb-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class=" pull-left p-0 font-red col-3">Name :</div>
+                                    <div class="col-9 pull-left p-0 font-blue">Aradhita </div>
+                                </div>
+                                <div class="col-12 p-0 pull-left">
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-3 pull-left p-0 font-red">Designation :</div>
+                                        <div class="col-9 pull-left font-blue"></div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Address :</div>
+                                        <div class="col-8 pull-left p-0 font-blue">9819149639</div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Email :</div>
+                                        <div class="col-8 pull-left p-0 font-blue"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Contact :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 pull-left border-blue blue-back br8 mt-1">
+                        <div class="col-12 pull-left text-center pt-2 fw-bold pb-2 fs-5 font-blue ">
+                            Confirm and declare
+                        </div>
+                        <div class="col-12 pull-left">
+                            <div class=" col-12 pull-left pt-1 mb-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class=" pull-left p-0 font-red col-3">Verified By :</div>
+                                    <div class="col-9 pull-left p-0 font-blue">Aradhita </div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-3 pull-left p-0 font-red">Designation :</div>
+                                    <div class="col-9 pull-left font-blue"></div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Remark :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">9819149639</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mt-2 pull-left">
+                    <div class="col-12 p-0 pull-left border-blue blue-back br8">
+                        <div class="col-12 pull-left text-center pt-2 fw-bold pb-2 fs-5 font-blue ">
+                            Person in Account Department
+                        </div>
+                        <div class="col-12 pull-left " >
+                            <div class=" col-12 pull-left pt-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class=" pull-left p-0 font-red col-3">Name :</div>
+                                    <div class="col-9 pull-left p-0 font-blue">Aradhita </div>
+                                </div>
+                                <div class="col-12 p-0 pull-left">
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-3 pull-left p-0 font-red">Designation :</div>
+                                        <div class="col-9 pull-left font-blue"></div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Address :</div>
+                                        <div class="col-8 pull-left p-0 font-blue">9819149639</div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Email :</div>
+                                        <div class="col-8 pull-left p-0 font-blue"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Contact :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class=" col-12 pull-left mt-3 mb-1 pt-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class=" pull-left p-0 font-red col-3">Name :</div>
+                                    <div class="col-9 pull-left p-0 font-blue">Aradhita </div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-3 pull-left p-0 font-red">Designation :</div>
+                                    <div class="col-9 pull-left font-blue"></div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Address :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">9819149639</div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Email :</div>
+                                    <div class="col-8 pull-left p-0 font-blue"></div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Contact :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 mt-2 pull-left">
+                    <div class="col-12 p-0 mb-2 pull-left border-blue blue-back br8">
+                        <div class="col-12 pull-left text-center pt-2 fw-bold pb-2 fs-5 font-blue ">
+                            Supporting Documents
+                        </div>
+                        <div class="col-12 pull-left">
+                            <div class=" col-12 pull-left pt-1 mb-1 pb-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left p-0">
+                                    <span class="col-4 pull-left"><button type="button" class="btn btn-primary btn-block btn-sm">PAN Card</button></span>
+                                    <span class="col-4 pull-left"><button type="button" class="btn btn-primary btn-block btn-sm">Aadhar</button></span>
+                                    <span class="col-4 pull-left"><button type="button" class="btn btn-primary btn-block btn-sm">GST Certificate</button></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 p-0 pull-left border-blue blue-back br8">
+                        <div class="col-12 pull-left text-center pt-1 fw-bold pb-1 fs-5 font-blue ">
+                            Verified by Zest
+                            <div class="pull-right pe-1 edit_customer fs-6" onclick="get_customer_detail_input(),check_type('#add_customer_modal','etype','.etype_customer','etype_customer')" data-bs-target="#add_customer_modal" data-bs-toggle="modal">
+                                <ion-icon name="create-outline" role="img" class="md hydrated" aria-label="create outline"></ion-icon>
+                                <span class="font-blue" style="font-size: 13px;">Edit </span>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-1 pull-left " >
+                            <div class=" col-12 pull-left pt-1 border-blue font12 br8" style=" background: white; "> 
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class=" pull-left p-0 font-red col-3">Name :</div>
+                                    <div class="col-9 pull-left p-0 font-blue">Aradhita </div>
+                                </div>
+                                <div class="col-12 p-0 pull-left">
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-3 pull-left p-0 font-red">Designation :</div>
+                                        <div class="col-9 pull-left font-blue"></div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Credit Limit :</div>
+                                        <div class="col-8 pull-left p-0 font-blue">9819149639</div>
+                                    </div>
+                                    <div class="col-12 pull-left border-blue-bot p-0">
+                                        <div class="col-4 pull-left p-0 font-red">Credit Period :</div>
+                                        <div class="col-8 pull-left p-0 font-blue"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Validity :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Note :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                                <div class="col-12 pull-left border-blue-bot p-0">
+                                    <div class="col-4 pull-left p-0 font-red">Document :</div>
+                                    <div class="col-8 pull-left p-0 font-blue">aradhita@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addCredit" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5">Verify below details</h5>
+                </div>
+                <div class="modal-body text-start">
+                    <input type="hidden" name="id" class="id">
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="text1">Enter Name</label>
+                            <input type="text" class="form-control input_style" name="verified_by" style="font-size: 15px !important;">
+                            <i class="clear-input">
+                                <ion-icon name="close-circle" role="img" class="md hydrated" aria-label="close circle"></ion-icon>
+                            </i>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label" for="name">Designation</label>
+                                <input type="text" class="form-control input_style" name="verified_designation" style="font-size: 15px !important;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Credit Limit</label>
+                            <input type="text" class="form-control input_style" name="credit_limit"  data-pattern="^(\d)+$" data-validation-message="Only Numbers" style="font-size: 15px !important;">
+                        </div>
+                    </div>
+
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Credit Period</label>
+                            <input type="text" class="form-control input_style " name="credit_period" style="font-size: 15px !important;">
+                            <!-- <span style="position: absolute;top: 18px;right: 0;background: #283477;height: 40px;border-radius: 0px 16px 16px 0px;line-height: 40px;padding: 0 10px;color: #fff;">Days</span> -->
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Validity</label>
+                            <input type="text" class="form-control input_style datepickernomax" name="verification_validity" style="font-size: 15px !important;">
+                        </div>
+                    </div>
+
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label" for="name">Note</label>
+                            <textarea type="text" class="form-control input_style" name="verification_note" style="font-size: 15px !important;"></textarea>
+                            <!-- <span style="position: absolute;top: 18px;right: 0;background: #283477;height: 40px;border-radius: 0px 16px 16px 0px;line-height: 40px;padding: 0 10px;color: #fff;">Days</span> -->
+                        </div>
+                    </div>
+                    <div class="form-group basic pull-left w-100">
+                        <div class="input-wrapper">
+                            <label class="label mb-1">Upload Document</label>
+                            <div class="custom-file-upload" style="height: 40px;">
+                                <input type="file" id="add_verification_document" onchange="readFile(this,'#addCredit input[name=verification_document]')" accept="image/*,application/pdf">
+                                <label for="add_verification_document">
+                                    <span>
+                                        <strong>                                                    
+                                            <i>Choose file</i>
+                                        </strong>
+                                    </span>
+                                </label>
+                                <input type="hidden" name="verification_document">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="button" class="btn col-6 pull-left btn-text-primary" onclick="validate('#addCredit','add_credit')">Submit</button>
+                        <button type="button" class="btn col-6 pull-left btn-text-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="kyc_form" data-bs-backdrop="static" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5">KYC Form</h5>
+                </div>
+                <div class="modal-body text-start">
+                    <input type="hidden" name="id" class="id">
+                    <div class="bg-white p-2 border-radius-10">
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Corporate Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="corporate_name" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label col-md-2 col-12 pull-left" for="name" style="line-height: 20px;">Type <span class="text-danger">*</span></label>
+                                    <div class="form-check col-lg-3 mb-1 col-md-3  col-sm-3 col-6 pull-left text-left">
+                                        <input class="form-check-input" type="radio" name="corporate_type" value="company" id="company" data-type="radio" data-name="corporate_type" data-validation-message="Check one of them" data-required="yes" data-validation-required-message="This field is required">
+                                        <label class="form-check-label" for="company">
+                                            Company
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-lg-3  mb-1 col-md-3  col-sm-3 col-6 pull-left text-left">
+                                        <input class="form-check-input" type="radio" name="corporate_type" value="partnership" id="partnership" data-type="radio" data-name="corporate_type" data-validation-message="Check one of them" data-required="yes" data-validation-required-message="This field is required">
+                                        <label class="form-check-label" for="partnership">
+                                            Partnership
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-lg-3  col-md-3  col-sm-6 col-12 pull-left text-left">
+                                        <input class="form-check-input" type="radio" name="corporate_type" value="sole proprietorship" id="sole_proprietorship" data-type="radio" data-name="corporate_type" data-validation-message="Check one of them" data-required="yes" data-validation-required-message="This field is required">
+                                        <label class="form-check-label" for="sole_proprietorship">
+                                            Sole Proprietorship
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Business Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="corporate_address" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Email <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="corporate_email"  data-pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" data-validation-message="Not valid email" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Telephone Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="corporate_phone"  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">GST number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="corporate_gst" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Nature of Business <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="nature_of_business" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Yr / Month of Establishment <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style year-picker" maxlength="4"  data-pattern="^(\d)+$" data-validation-message="Only Numbers" name="corporate_establishment" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-title pull-left text-center mt-1 w-100 bold font17">Particulars of owner (Address proof compulsory)</div>
+                        
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="owner_name" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Designation <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="owner_designation" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Contact Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="owner_address" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Email <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="owner_email"  data-pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" data-validation-message="Not valid email" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Telephone Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="owner_phone"  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-title pull-left text-center mt-1 w-100 bold font17">Particulars of contact person in Account Department</div>
+                        
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Name 1 <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="accountant_name" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Designation <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="accountant_designation" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Contact Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="accountant_address" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Email <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="accountant_email"  data-pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" data-validation-message="Not valid email" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Telephone Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="accountant_phone"  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 mt-5" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Name 2 <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="name" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Designation <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="designation" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Contact Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="address" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Email <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="email"  data-pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" data-validation-message="Not valid email" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Telephone Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="phone"  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-title pull-left text-center mt-1 w-100 bold font17">Confirm and declare that all above information is true and correct</div>
+                        
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Verified By <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="confirm_name" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Designation <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="confirm_designation" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Remark <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name="remark" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section-title pull-left text-center mt-1 w-100 bold font17">Supporting Documents: (compulsory)</div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">Upload PAN <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_pan" onchange="readFile(this,'#kyc_form input[name=pan]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_pan">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name="pan">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">Owners identity proof (Aadhar) <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_aadhar" onchange="readFile(this,'#kyc_form input[name=aadhar]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_aadhar">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name="aadhar">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">GST Certificate <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_gst" onchange="readFile(this,'#kyc_form input[name=gst]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_gst">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name="gst">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="submit" class="btn col-6 pull-left btn-text-primary" onclick="validate('#kyc_form','updateKYC')">Submit</button>
+                        <button type="button" class="btn col-6 pull-left btn-text-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/base.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+
+</body>
+
+</html>
+<script>
+//     function save_pdf()
+// {
+//     window.jsPDF = window.jspdf.jsPDF;
+
+// var doc = new jsPDF({
+//     orientation: 'landscape',
+// })
+// var width = doc.internal.pageSize.getWidth();
+
+// // Source HTMLElement or a string containing HTML.
+// var elementHTML = document.querySelector(".get_details");
+
+// doc.html(elementHTML, {
+//     callback: function(doc) {
+//         // Save the PDF
+//         doc.save('sample-document.pdf');
+//     },
+//     x: 0,
+//     y: 10,
+//     width: width, //target width in the PDF document
+//     windowWidth: $(window).width() //window width in CSS pixels
+// });
+// }
+function save_pdf()
+{
+    $('.download-btn').html('Please Wait').parent().attr('disable',true)
+    let searchParams = new URLSearchParams(window.location.search)
+    id = searchParams.get('id')
+    $.ajax({
+        type: "get",
+        async: true,
+        url: baseurl + 'KYC/create_pdf',
+        data: 'id=' + id,
+        success: function (html) 
+        {
+            $('.download-btn').html('Download').parent().attr('disable',false)
+            window.location.href=baseurl + 'KYC/download_pdf?id='+id;
+        }
+
+    });
+}
+
+get_data()
+function get_data()
+{
+    let searchParams = new URLSearchParams(window.location.search)
+    id = searchParams.get('id')
+    $.ajax({
+        type: "POST",
+        async: true,
+        url: baseurl + 'KYC/get_KYC_data',
+        data: 'id=' + id,
+        success: function (html) 
+        {
+            console.log(html)
+            $('.get_details').html(html)
+        }
+
+    });
+}
+function updateKYC()
+{
+  	data='';
+    $('#kyc_form button[type=submit]').attr('disabled',true)
+  	$('#kyc_form').find('select, textarea, input[type=text], input[type=hidden], input[type=radio], input[type=checkbox]').each(function(){
+  		if(data=='')
+        {
+  			val=$(this).val().replace(/&/g,'amp;').replace(/\+/g,'plussss')
+  			data+=$(this).attr('name')+'='+val
+        }
+  		else
+		{
+  			val=$(this).val().replace(/&/g,'amp;').replace(/\+/g,'plussss')
+  			data+='&'+$(this).attr('name')+'='+val  			
+  	    }
+  	})
+    corporate_type=$('input[type=radio][name=corporate_type]:checked').val()
+    $.ajax({
+        type: "POST",
+        url: baseurl + 'KYC/updateKYC',
+        async: true,
+        data: decodeURIComponent(data)+'&corporate_type='+corporate_type+'&table=kyc',
+        success: function (html) 
+        {
+            $('#kyc_form button[type=submit]').attr('disabled',false)
+  	        if(html.trim()=='ok')
+            {
+                show_toast('Data updated successfully', "success", '', "top", "success");  
+                $('#kyc_form').find('input[type=text]').val('')
+                $('#kyc_form').find('input[type=hidden]').val('')
+                $('#kyc_form').find('input[type=radio]:checked').prop('checked',false)
+                $('#kyc_form .custom-file-upload label').removeClass('bg-success')
+                $('#kyc_form').modal('hide')
+                get_data()
+            }
+        }
+    }); 
+    
+}
+</script>

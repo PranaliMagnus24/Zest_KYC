@@ -1,0 +1,345 @@
+<html class="hydrated">
+<head>
+    <style data-styles="">
+        ion-icon {
+            visibility: hidden
+        }
+        
+        .hydrated {
+            visibility: inherit
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zest</title>
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+    <link href="assets/zestlogo.png" rel="icon">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+</head>
+<body>
+    <div id="loader" class="hidden">
+        Please do not reload page untill data gets added
+    </div>
+    <div class="col-lg-12 col-md-12 col-12">
+        <div class="section mt-2" style="width: 100%;">
+            <div class="col-12" style="width: 100%;  ">
+                <div class="col-12 pull-left p-0" style="width: 100%;display: flex;align-items: center;justify-content: center;text-align: center;">
+                    <div class="col-sm-2 pull-left text-center"><img src="assets/logo.png" style="height: 100px;"></div>                                    
+                </div>
+                <div class="col-12 pull-left p-0" style="width: 100%;display: flex;align-items: center;justify-content: center;text-align: center;">
+                    <h1 style="font-family: Tahoma, Verdana, Segoe, sans-serif;font-size:48px">AGENT FORM</h1>
+                </div>
+                <div class="col-12 pull-left p-0" style="width: 100%;display: flex;align-items: center;justify-content: center;text-align: center;">
+                    <div class="col-md-6 bg-white p-2 border-radius-10" id="kyc_form">
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Name of the Company<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='company_name' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Address<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='company_address' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label col-md-4 col-12 pull-left" for="name" style="line-height: 20px;">Company is<span class="text-danger">*</span></label>
+                                    <div class="form-check col-lg-3 mb-1 col-md-3  col-sm-3 col-6 pull-left text-left">
+                                        <input class="form-check-input" type="radio" name='company_type' value="IATA" id="company" data-type="radio" data-name="company_type" data-validation-message="Check one of them" data-required="yes" data-validation-required-message="This field is required">
+                                        <label class="form-check-label" for="company">
+                                            IATA
+                                        </label>
+                                    </div>
+                                    <div class="form-check col-lg-3  mb-1 col-md-3  col-sm-3 col-6 pull-left text-left">
+                                        <input class="form-check-input" type="radio" name='company_type' value="NON IATA" id="partnership" data-type="radio" data-name="company_type" data-validation-message="Check one of them" data-required="yes" data-validation-required-message="This field is required">
+                                        <label class="form-check-label" for="partnership">
+                                            NON IATA
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Proprietorship/Partnership/Pvt.Ltd.Co <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='company_partnership' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">TAAI/TAFI Membership Number <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='membership_number'  style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Office Tel. No <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='office_number'  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Office Fax Nos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='office_phone'  data-pattern="^(\d)+$" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Mobile Nos <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='office_mobile'  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Email Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='office_email'  data-pattern="^[a-zA-Z0-9.!#$%&amp;'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" data-validation-message="Not valid email" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">1. Full Name of Owners/Director 1 <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner_name' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner_address' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Mobile <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner_mobile'  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">2. Full Name of Owners/Director 2 <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner2_name' style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Address <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner2_address'  style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">Mobile <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control input_style" name='owner2_mobile'  data-pattern="^(\d)+$" minlength="10" maxlength="12" data-validation-message="Only Numbers" style="font-size: 15px !important;" data-required="yes" data-validation-required-message="This field is required">
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="section-title pull-left text-center mt-1 w-100 bold font17">Supporting Documents: (compulsory)</div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">Upload Company PAN <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_pan" onchange="readFile(this,'#kyc_form input[name=pan]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_pan">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name='pan'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">Owners Address proof <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_aadhar" onchange="readFile(this,'#kyc_form input[name=aadhar]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_aadhar">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name='aadhar'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group basic pull-left w-100">
+                            <div class="input-wrapper">
+                                <label class="label mb-1">GST Certificate <span class="text-danger">*</span></label>
+                                <div class="custom-file-upload" style="height: 40px;">
+                                    <input type="file" id="add_gst" onchange="readFile(this,'#kyc_form input[name=gst]')" accept="image/*,application/pdf" data-required="yes" data-validation-required-message="This field is required">
+                                    <label for="add_gst">
+                                        <span>
+                                            <strong>                                                    
+                                                <i>Choose file</i>
+                                            </strong>
+                                        </span>
+                                    </label>
+                                    <input type="hidden" name='gst'>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-12" style="float: left;padding: 0px; padding-left: 0px;">
+                            <div class="form-group basic pull-left w-100">
+                                <div class="input-wrapper">
+                                    <label class="label" for="name">I/We declare that all information provided in this form and in the attachments are true to the best of my/our knowledge and belief.</label>                                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 pull-left text-center mt-1">
+                            <button type="submit" class="btn btn-primary me-1 no-border blue-back" style="background: #283477 !important;" onclick="validate('#kyc_form','add_agent_kyc')">Submit</button>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="token" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="modal-title fs-5 text-center">Token</h5>
+                </div>
+                <div class="modal-body text-center text-black">
+                    <span class="text w-100 pull-left">Already in use</span>
+                    <span class=" w-100 pull-left">Please Contact Your Administrator</span>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-inline w-100">
+                        <button type="button" class="btn col-12 pull-left btn-text-primary">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/base.js"></script>
+
+
+<script>
+searchParams = new URLSearchParams(window.location.search)
+token = searchParams.get('token')
+if(token=='' || token==null)
+{
+    setTimeout(() => {
+        $('#token').modal('show')
+        $('#token .text').html('Invalid Link')
+    }, 1500);
+}
+else
+{
+    checkToken()
+}
+function checkToken()
+{
+    var returnval;
+    $.ajax({
+        type: "POST",
+        url: baseurl + 'KYC/validateToken',
+        async: false,
+        data: 'token='+token,
+        success: function (html) 
+        {
+            if(html!='ok')
+            {
+                $('#token .text').html(html)
+                setTimeout(() => {
+                    $('#token').modal('show')
+                }, 1000);
+            }
+            returnval= html.trim()
+        }
+    })
+    return returnval
+}
+function add_agent_kyc()
+{
+    if(token=='' || token==null)
+    {
+        $('#token').modal('show')
+    }
+    else if(checkToken()=='ok')
+    {
+        data='';
+        $('#kyc_form button[type=submit]').attr('disabled',true)
+        $('#kyc_form').find('select, textarea, input[type=text], input[type=hidden], input[type=radio]:checked, input[type=checkbox]').each(function(){
+            if(data=='')
+            {
+                val=$(this).val().replace(/&/g,'amp;').replace(/\+/g,'plussss')
+                data+=$(this).attr('name')+'='+val
+            }
+            else
+            {
+                val=$(this).val().replace(/&/g,'amp;').replace(/\+/g,'plussss')
+                data+='&'+$(this).attr('name')+'='+val  			
+            }
+        })
+        
+        $.ajax({
+            type: "POST",
+            url: baseurl + 'KYC/addagentKYC',
+            async: true,
+            data: decodeURIComponent(data)+'&token='+token,
+            success: function (html) 
+            {
+                $('#kyc_form button[type=submit]').attr('disabled',false)
+                if(html.trim()=='ok')
+                {
+                    show_toast('Data added successfully', "success", '', "top", "success");  
+                    $('#kyc_form').find('input[type=text]').val('')
+                    $('#kyc_form').find('input[type=hidden]').val('')
+                    $('#kyc_form').find('input[type=radio]:checked').prop('checked',false)
+                    $('#kyc_form .custom-file-upload label').removeClass('bg-success')
+                }
+            }
+        }); 
+    }     
+}
+</script>
+                    
+</body>
+
+</html>

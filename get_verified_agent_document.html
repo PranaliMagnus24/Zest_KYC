@@ -1,0 +1,120 @@
+<html class="hydrated">
+    <head>
+        <style data-styles="">
+            ion-icon {
+                visibility: hidden
+            }
+            
+            .hydrated {
+                visibility: inherit
+            }
+        </style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Zest</title>
+        <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
+        <link href="assets/zestlogo.png" rel="icon">
+        <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js" data-stencil-namespace="ionicons"></script>
+        <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js" data-stencil-namespace="ionicons"></script>
+    </head>
+<body>
+    <div class="col-lg-12 col-md-12">
+        <div class="section mt-2" style="width: 100%;">
+            <div class="col-12" style="width: 100%;  ">
+                <div class="col-12 pull-left p-0" style="width: 100%;display: flex;align-items: center;justify-content: center;text-align: center;">
+                    <div class="col-2 pull-left text-center"><img src="assets/logo.png" style="height: 100px;"></div>                                    
+                </div>
+                <div class="col-12 pull-left p-0">
+                    <div class=" col-3 pull-left p-0">
+                        <div class="form-group basic">
+                            <div class="input-wrapper">
+                                <input type="text" id="find" class="form-control bg-white box-shadow-1 no-border" autocomplete="off" onkeyup="clear_btn_hide(),onenter('apply_search')" style="background-color: white; height: 37px; font-size: 10px;padding-left: 37px; " placeholder="Search">
+                                <ion-icon name="search-outline" style="right: 0px;position: absolute;top: 6px;font-size: 25px;padding-right: 5px;" onclick="apply_search()" role="img" class="md hydrated" aria-label="search outline"></ion-icon>
+                                <div id="clear_in" class="hidden" style="font-size: 29px;position: absolute;top: 4px;color: #283477;" onclick="clear_input()">
+                                    <ion-icon name="close-circle-outline" role="img" class="md hydrated" aria-label="close circle outline"></ion-icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-2 pull-left">
+                        <div class="w-100 text-center pull-left box-shadow-1" id="toggles" style="float: right;background: #fff;display: block;border-radius: 10px;border: 0;padding: 9px 0;margin-top: 10px;">
+                            <div class="form-check col-6 p-0 pull-left">
+                                <input class="form-check-input" type="checkbox" name="flexRadioDefault" onclick="apply_search()" id="verified" value="yes">
+                                <label class="form-check-label" for="verified">
+                                    Verified
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-responsive w-100 mt-2 pull-left bg-white">
+                    <div class="col-12 p-0 pull-left font-blue remove" style="background: #bdc5f1;position: sticky;top: 0;position: -webkit-sticky;font-weight: bold !important;z-index: 1;">
+                        <div class="pull-left Flex-item font-blue" style="width: 4%;padding-left: 8px;">Sr. No.</div>
+                        <div class="col-1 pull-left Flex-item font-blue" style="width: 7%;">Date</div>
+                        <div class="col-1 pull-left Flex-item font-blue position-relative" style="width: 14%;">Name of the Company</div>
+                        <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Address</div>
+                        <div class="col-1 pull-left Flex-item font-blue" style="width: 14%;">Partnership</div>
+                        <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Office Tel. No</div>
+                        <div class="col-1 pull-left Flex-item font-blue" style="width: 13%;">Mobile Nos</div>
+                        <div class="col-2 pull-left Flex-item font-blue" style="width: 10%;">Email Address</div>                  
+                    </div>
+                    <div class="details1 w-100 float-start">
+                                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="assets/js/lib/jquery-3.4.1.min.js"></script>
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap-->
+<script src="assets/js/lib/popper.min.js"></script>
+<script src="assets/js/lib/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<script src="assets/js/base.js"></script>
+<script>
+window.location.href = 'get_verified_document.html'
+
+get_agent_KYC()
+function get_agent_KYC()
+{
+    $.ajax({
+        type: "GET",
+        url: baseurl + 'KYC/get_agent_KYC',
+        async: true,
+        success: function (html) 
+        {
+            $('.details1').html(html)
+        }
+    });     
+}
+function apply_search()
+{
+  	$('.details1').html('')
+    value=$('#find').val()
+    verified=''
+    if($('#verified:checked').length>0)
+    {
+        verified=$('#verified:checked').val()
+    }
+    $.ajax({
+        type: "GET",
+        url: baseurl + 'KYC/get_filter_agent_KYC',
+        async: true,
+        data:"value="+value+"&verified="+verified,
+        success: function (html) 
+        {
+            $('.details1').html(html)
+        }
+    });     
+}
+
+</script>
+                    
+</body>
+
+</html>
